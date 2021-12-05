@@ -5,12 +5,12 @@ session = Session(bind=engine)
 # # delete user from database
 
 
-# def delete_user(session):
-#     # user = session.query(User).filter(us).first()
-#     Users = local_session.query(User).all()
-#     session.delete(user)
-#     session.commit()
-#     return "User deleted"
+def delete_user(session):
+    # user = session.query(User).filter(us).first()
+    user = session.query(User).all()
+    session.delete(user)
+    session.commit()
+    return "User deleted"
 
 
 # delete_user(session)
@@ -24,7 +24,8 @@ def delete_all_users(session):
         session.commit()
     return "All users deleted"
 
-delete_all_users(session)
+
+# delete_all_users(session)
 
 # local_session = Session(bind=engine)
 
